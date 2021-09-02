@@ -2,15 +2,13 @@ import { createCanvas, PixelPainterStore } from "../stores/PixelPainterStore"
 
 
 const Utility = () => {
-  const state = PixelPainterStore.useState();
-
 
   const clear = () => {
-    PixelPainterStore.update(state => {state.canvas = createCanvas("#FFFFFF", false)})
+    PixelPainterStore.update(state => {state.canvas = createCanvas(false)})
   }
 
   const random = () => {
-    PixelPainterStore.update(state => {state.canvas = createCanvas("#FFFFFF", true)})
+    PixelPainterStore.update(state => {state.canvas = createCanvas(true)})
   }
 
   return (

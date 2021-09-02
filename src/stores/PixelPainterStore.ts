@@ -7,7 +7,7 @@ type PixelPainterStoreType = {
 }
 
 //return an (16 x 16) 2D array filled with "#FFFFFF"
-export const createCanvas = (color: string, random: boolean) => {
+export const createCanvas = (random: boolean, color: string = "#FFFFFF") => {
   const output: string[][] = []
   for (let i=0; i<16; i++){
     output[i] = []
@@ -23,6 +23,6 @@ export const createCanvas = (color: string, random: boolean) => {
 }
 
 export const PixelPainterStore = new Store<PixelPainterStoreType>({
-  canvas: createCanvas("#FFFFFF", false),
+  canvas: createCanvas(false),
   selectedColor: "#000000",
 })
